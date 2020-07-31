@@ -19,7 +19,7 @@ url = "http://www.journaldunet.com/management/ville/index/villes?page="
 
 with open('dataset\\liensVilles.csv','a',encoding='utf-8') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames= colonnes, lineterminator='\n')
-    for numeroPage in range(1,709):
+    for numeroPage in range(1,701):
         print(numeroPage)
         req = requests.get(url + str(numeroPage))
         contenu = req.content
